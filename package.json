@@ -5,5 +5,18 @@
   "repository": "https://github.com/A2Lab-Team/A2Lab-Team.github.io.git",
   "author": "Vitor Luiz Cavalcanti <vitor.cavalcanti@aasp.org.br>",
   "license": "GPL-3.0",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "poi": "^10.1.6",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "dependencies": {
+    "vue": "^2.5.16"
+  },
+  "scripts": {
+    "build": "poi build src/index.js",
+    "start": "poi src/index.js"
+  }
 }
