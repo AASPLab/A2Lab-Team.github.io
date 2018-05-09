@@ -1,0 +1,9 @@
+{
+  "name": "A2Lab-Team.github.io",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/A2Lab-Team/A2Lab-Team.github.io.git",
+  "author": "Vitor Luiz Cavalcanti <vitor.cavalcanti@aasp.org.br>",
+  "license": "GPL-3.0",
+  "private": true
+}
