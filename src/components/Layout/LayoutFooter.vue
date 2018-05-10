@@ -4,14 +4,14 @@
       <h3 class="title">Mídias</h3>
 
       <div class="links">
-        <a class="link" href="?" target="_blank">
-          <img class="icon" src="~@/assets/icons/Facebook.svg" alt="Facebook" />
-        </a>
-        <a class="link" href="?" target="_blank">
-          <img class="icon" src="~@/assets/icons/Instagram.svg" alt="Instagram" />
-        </a>
-        <a class="link" href="https://github.com/A2Lab-Team" target="_blank">
-          <img class="icon" src="~@/assets/icons/GitHub.svg" alt="GitHub" />
+        <a
+          v-for="media in medias"
+          :key="media.name"
+          :href="media.link"
+          class="link"
+          target="_blank"
+        >
+          <img class="icon" :src="media.icon" :alt="media.name" />
         </a>
       </div>
     </section>
@@ -31,6 +31,16 @@
     </section>
   </footer>
 </template>
+
+<script>
+  import medias from '@/medias'
+
+  export default {
+    data () {
+      return { medias }
+    }
+  }
+</script>
 
 <style lang="stylus">
   $layout-footer-links

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import LayoutContainer from '@/components/LayoutContainer'
+  import LayoutContainer from '@/components/Layout/LayoutContainer'
 
   export default {
     components: { LayoutContainer },

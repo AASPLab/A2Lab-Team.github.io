@@ -8,7 +8,7 @@
 </template>
 
 <script>
-  import LayoutFooter from '@/components/LayoutFooter'
+  import LayoutFooter from '@/components/Layout/LayoutFooter'
 
   export default {
     components: { LayoutFooter },

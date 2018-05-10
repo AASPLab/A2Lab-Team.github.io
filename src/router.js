@@ -12,7 +12,7 @@ const router = new Router({
       component: () => import('@/containers/HomeContainer'),
     },
     {
-      name: 'Subscribe',
+      name: 'Inscrição',
       path: '/subscribe',
       component: () => import('@/containers/SubscribeContainer'),
     }
