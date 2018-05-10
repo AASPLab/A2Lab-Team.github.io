@@ -13,7 +13,8 @@
     "vue-template-compiler": "^2.5.16"
   },
   "dependencies": {
-    "vue": "^2.5.16"
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1"
   },
   "scripts": {
     "build": "poi build src/index.js",

@@ -1,12 +1,14 @@
 <template>
-  <layout-footer />
+  <layout-container>
+    <router-view />
+  </layout-container>
 </template>
 
 <script>
-  import LayoutFooter from '@/components/LayoutFooter'
+  import LayoutContainer from '@/components/LayoutContainer'
 
   export default {
-    components: { LayoutFooter },
+    components: { LayoutContainer },
   }
 </script>
 
