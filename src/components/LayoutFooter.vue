@@ -2,20 +2,88 @@
   <footer class="layout-footer">
     <section class="media">
       <h3 class="title">Mídias</h3>
+
+      <div class="links">
+        <a class="link" href="?" target="_blank">
+          <img class="icon" src="~@/assets/icons/Facebook.svg" alt="Facebook" />
+        </a>
+        <a class="link" href="?" target="_blank">
+          <img class="icon" src="~@/assets/icons/Instagram.svg" alt="Instagram" />
+        </a>
+        <a class="link" href="https://github.com/A2Lab-Team" target="_blank">
+          <img class="icon" src="~@/assets/icons/GitHub.svg" alt="GitHub" />
+        </a>
+      </div>
+    </section>
+
+    <section class="institutional">
+      <div class="links">
+        <a class="link -A2Lab" href="?" target="_blank">
+          <img class="icon" src="~@/assets/icons/A2Lab.svg" alt="A2Lab" />
+        </a>
+        <a class="link -AASP" href="https://www.aasp.org.br/" target="_blank">
+          <img class="icon" src="~@/assets/icons/AASP.svg" alt="AASP" />
+        </a>
+      </div>
+
+      <p class="copyright">&copy; 2018 A2LAB - AASP.</p>
+      <p class="address">R. Álvares Penteado, Nº 151 - Centro, São Paulo/SP - CEP 01012-905</p>
     </section>
   </footer>
 </template>
 
-<script>
-  export default {
-
-  }
-</script>
-
 <style lang="stylus">
-  $layout-footer-media
+  $layout-footer-links
     &
-      padding-top: 7.5px
+      display: flex
+      flex-direction: row
+      justify-content: center
+      margin-left: auto
+      margin-right: @margin-left
+
+    > .link
+      display: block
+
+    > .link > .icon
+      display: block
+      max-width: 100%
+      max-height: 100%
+
+  .layout-institutional-links
+    &
+      @extends $layout-footer-links
+      align-items: flex-end
+
+    > .link.-A2Lab
+      width: 51px
+      height: 29px
+
+    > .link.-AASP
+      width: 62px
+      height: 18px
+
+    > .link + .link
+      margin-left: 30px
+
+  .layout-footer-media-links
+    &
+      @extends $layout-footer-links
+      box-sizing: border-box
+      border-bottom: 1px solid #ffffff
+      padding-top: 18px
+      padding-bottom: 12px
+
+    > .link
+      width: 25px
+      height: @width
+
+    > .link + .link
+      margin-left: 70px
+
+  .layout-footer-media
+    &
+      box-sizing: border-box
+      padding: 7.6px 6.3px 12px
 
     > .title
       margin: 0
@@ -25,11 +93,34 @@
       text-align: center
       text-transform: uppercase
 
+    > .links
+      @extends .layout-footer-media-links
+
   .layout-footer
     &
-      height: 155px
+      height: 175px
       background-color: #333333
 
     > .media
-      @extends $layout-footer-media
+      @extends .layout-footer-media
+
+    > .institutional
+      &
+        display: flex
+        flex-direction: column
+
+      > .address
+      > .copyright
+        margin: 0
+        color: #ffffff
+        font-size: 7pt
+        text-align: center
+        text-transform: uppercase
+
+      > .copyright
+        margin-top: 15px
+        margin-bottom: 3.7px
+
+      > .links
+        @extends .layout-institutional-links
 </style>
