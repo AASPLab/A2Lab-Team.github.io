@@ -50,7 +50,13 @@
     &
       display: inline-block
       align-items: center
+      border-radius: 6px
       background-color: #0999ff
+
+    > .text
+      color: #ffffff
+      text-transform: uppercase
+
 
     &.-is-button
       border: 0 none transparent
@@ -64,19 +70,35 @@
     &.-is-link
       text-decoration: none
 
-    > .text
-      color: #ffffff
-      text-transform: uppercase
-
-    &.-xl
-      &
-        height: 62px
-        padding-left: 12px
-        padding-right: @padding-left
-        border-radius: 6px
-        line-height: @height
+    &.-is-alternative
+      background-color: transparent
+      border: 3px solid #ffffff
 
       > .text
-        font-size: 21pt
+        font-weight: 700
+
+    &.-xl
+      height: 62px
+      padding-left: 12px
+      padding-right: @padding-left
+      line-height: @height
+
+      > .text
         line-height: @height
+        font-size: 21pt
+
+      &.-is-alternative > .text
+        line-height: (@height - 3px * 2)
+
+    &.-sm
+      height: 36px
+      padding-left: 6px
+      padding-right: @padding-left
+
+      > .text
+        line-height: @height
+        font-size: 14pt
+
+      &.-is-alternative > .text
+        line-height: (@height - 3px * 2)
 </style>
