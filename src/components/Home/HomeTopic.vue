@@ -65,5 +65,5 @@
       margin: 0
       color: $font-color
       font-size: 10pt
-      text-align: justify
+      text-align: center
 </style>

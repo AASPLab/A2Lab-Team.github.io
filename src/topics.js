@@ -2,16 +2,16 @@ export default [
   {
     icon: require('@/assets/icons/Ontem.svg'),
     title: 'Ontem',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet neque sit amet magna venenatis commodo in at ex. In iaculis vel nisl ac dignissim. Proin vestibulum sapien in pharetra facilisis. Nunc hendrerit sem justo, dapibus posuere erat sollicitudin nec. Ut sed volutpat lorem, a luctus risus. Aenean nec venenatis risus, nec tincidunt eros.'
+    description: 'A AASP nasceu com o DNA de inovação há 75 anos, criando produtos e serviços fundamentais aos advogados e atuando institucionalmente em favor dos direitos e das prerrogativas de seus associados.'
   },
   {
     icon: require('@/assets/icons/Hoje.svg'),
     title: 'Hoje',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet neque sit amet magna venenatis commodo in at ex. In iaculis vel nisl ac dignissim. Proin vestibulum sapien in pharetra facilisis. Nunc hendrerit sem justo, dapibus posuere erat sollicitudin nec. Ut sed volutpat lorem, a luctus risus. Aenean nec venenatis risus, nec tincidunt eros.'
+    description: 'Para conectar e valorizar a advocacia, a AASP cria a A2Lab, com o objetivo de trazer inovação e tecnologia para o mercado jurídico. Mantendo sua tradição e credibilidade e aliando as competências necessárias para a nova economia.'
   },
   {
     icon: require('@/assets/icons/Amanhã.svg'),
     title: 'Amanhã',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sit amet neque sit amet magna venenatis commodo in at ex. In iaculis vel nisl ac dignissim. Proin vestibulum sapien in pharetra facilisis. Nunc hendrerit sem justo, dapibus posuere erat sollicitudin nec. Ut sed volutpat lorem, a luctus risus. Aenean nec venenatis risus, nec tincidunt eros.'
+    description: 'Fomentar o empreendedorismo no judiciário aproximando advogados, empreendedores, estudantes e interessados em tecnologia.'
   },
 ]

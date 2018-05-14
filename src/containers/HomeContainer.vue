@@ -23,13 +23,13 @@
 </template>
 
 <script>
-  import ComponentButton from '@/components/Component/ComponentButton'
-  import ComponentLogo from '@/components/Component/ComponentLogo'
-  import HomeTopic from '@/components/Home/HomeTopic'
   import topics from '@/topics'
+  import HomeTopic from '@/components/Home/HomeTopic'
+  import ComponentLogo from '@/components/Component/ComponentLogo'
+  import ComponentButton from '@/components/Component/ComponentButton'
 
   export default {
-    components: { ComponentButton, ComponentLogo, HomeTopic },
+    components: { HomeTopic, ComponentLogo, ComponentButton },
     data () {
       return { topics }
     },
@@ -41,13 +41,24 @@
     &
       display: flex
       justify-content: space-around
+      flex-wrap: wrap
 
     > .topic
-      width: 25%
+      width: 90%
+
+      @media screen and (min-width: 768px)
+        width: 25%
+
+      @media screen and (max-width: 767px)
+        + .topic
+          margin-top: 35px
 
   .home-container
     &
       box-sizing: border-box
+      display: flex
+      align-items: center
+      flex-direction: column
       min-height: calc(100vh - 175px)
       padding-top: 30px
       padding-bottom: 50px
@@ -71,4 +82,3 @@
       @extends .home-container-topics
       margin-bottom: 45px
 </style>
-
