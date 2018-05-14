@@ -7,17 +7,20 @@
   "license": "GPL-3.0",
   "private": true,
   "devDependencies": {
+    "gh-pages": "^1.1.0",
     "poi": "^10.1.6",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "vue-template-compiler": "^2.5.16"
   },
   "dependencies": {
+    "valite": "^0.2.0",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1"
   },
   "scripts": {
     "build": "poi build src/index.js",
-    "start": "poi src/index.js"
+    "start": "poi src/index.js",
+    "deploy": "yarn build && gh-pages -d dist"
   }
 }
