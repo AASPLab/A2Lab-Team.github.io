@@ -21,6 +21,6 @@
   "scripts": {
     "build": "poi build src/index.js",
     "start": "poi src/index.js",
-    "deploy": "yarn build && gh-pages -d dist"
+    "deploy": "yarn build && cp dist/index.html dist/404.html && gh-pages -b master -d dist deploy"
   }
 }
