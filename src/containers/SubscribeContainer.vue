@@ -85,7 +85,7 @@
 
         const isError = Object.values(this.error).some((value) => value !== null)
 
-        if (!isError)
+        if (isError)
           return
 
         await fetch('https://a2lab-lp.firebaseio.com/users.json', {
