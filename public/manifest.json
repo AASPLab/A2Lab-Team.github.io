@@ -1,0 +1,15 @@
+{
+  "short_name": "A2Lab",
+  "name": "A2Lab",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "256x256 192x192 156x156 96x96 64x64 32x32 24x24 16x16",
+      "type": "text/svg"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#0999ff",
+  "background_color": "#ffffff"
+}

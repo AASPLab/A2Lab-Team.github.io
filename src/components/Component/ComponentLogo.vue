@@ -3,14 +3,14 @@
     <img
       v-if="isAlternative"
       class="image"
-      src="~@/assets/images/Logo-branco.png"
+      src="~@/assets/images/Logo-branco.svg"
       alt="A2Lab"
       title="Logo branco da A2Lab"
     />
     <img
       v-else
       class="image"
-      src="~@/assets/images/Logo.png"
+      src="~@/assets/images/Logo.svg"
       alt="A2Lab"
       title="Logo da A2Lab"
     />

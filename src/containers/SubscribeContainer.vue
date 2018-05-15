@@ -112,6 +112,7 @@
     align-items: center
     flex-direction: column
     width: 100%
+    max-width: 768px
     padding: 0 35px
 
     > .field
@@ -123,6 +124,9 @@
   .subscribe-container
     &
       box-sizing: border-box
+      display: flex
+      align-items: center
+      flex-direction: column
       min-height: calc(100vh - 175px)
       padding-top: 30px
       padding-bottom: 50px

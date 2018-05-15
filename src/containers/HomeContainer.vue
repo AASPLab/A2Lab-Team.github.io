@@ -40,8 +40,8 @@
   .home-container-topics
     &
       display: flex
-      justify-content: space-around
       flex-wrap: wrap
+      justify-content: space-around
 
     > .topic
       width: 90%
@@ -81,4 +81,5 @@
     > .topics
       @extends .home-container-topics
       margin-bottom: 45px
+      max-width: 1024px
 </style>
