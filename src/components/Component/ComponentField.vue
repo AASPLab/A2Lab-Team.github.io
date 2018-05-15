@@ -4,6 +4,7 @@
       v-bind="$attrs"
       class="field"
       autocomplete="new-password"
+      :value="value"
       @input="$emit('input', $event.target.value)"
     />
 

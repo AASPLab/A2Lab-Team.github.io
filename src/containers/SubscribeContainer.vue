@@ -32,6 +32,7 @@
       <component-button
         type="submit"
         class="subscribe-form-button"
+        :disabled="isSending"
         is-alternative
       >
         Enviar <img slot="icon" class="icon" src="~@/assets/icons/PaperPlane.svg" />
@@ -49,16 +50,14 @@
   import ComponentButton from '@/components/Component/ComponentButton'
   import SubscribeMessage from '@/components/Subscribe/SubscribeMessage'
 
-  const isRequired = (message) => (value) => {
-    const isOk = typeof value === 'string' && !!value.trim()
-    return isOk || message
-  }
+  const isRequired = (value) => typeof value === 'string' && !!value.trim()
 
   export default {
     components: { ComponentLogo, ComponentField, ComponentButton, SubscribeMessage },
     data () {
       return {
         isMessageVisible: false,
+        isSending: false,
         name: '',
         email: '',
         occupation: '',
@@ -70,24 +69,25 @@
       }
     },
     methods: {
-      async send () {
-        this.error.name = await validate(this.name, [
-          isRequired('Não se esqueça de preencher seu nome.')
-        ])
+      async validate () {
+        this.error.name       = isRequired(this.name) ? null : 'Não se esqueça de preencher seu nome.'
+        this.error.occupation = isRequired(this.name) ? null : 'Não se esqueça de preencher a profissão.'
 
         this.error.email = await validate(this.email, [
-          isRequired('Não se esqueça de preencher seu email.'),
-        ])
-
-        this.error.occupation = await validate(this.occupation, [
-          isRequired('Não se esqueça de preencher a profissão.')
+          (value) => isRequired(value) || 'Não se esqueça de preencher seu email.',
+          (value) => /^.+@.+\..+$/.test(value) || 'Esse e-mail parece invalido.'
         ])
 
         const isError = Object.values(this.error).some((value) => value !== null)
+        return isError
+      },
+      async send () {
+        const isError = await this.validate()
 
         if (isError)
           return
 
+        this.isSending = true
         await fetch('https://a2lab-lp.firebaseio.com/users.json', {
           method: 'POST',
           headers: {
@@ -97,9 +97,22 @@
             name: this.name,
             email: this.email,
             occupation: this.occupation
-          }),
-        });
-        this.isMessageVisible = true;
+          })
+        })
+
+        this.isMessageVisible = true
+        this.isSending = false
+        this.clean()
+      },
+      clean () {
+        this.name = ''
+        this.email = ''
+        this.occupation = ''
+        this.error = {
+          name: null,
+          email: null,
+          occupation: null,
+        }
       }
     }
   }
@@ -142,9 +155,10 @@
       @extend .subscribe-container-form
 
   .subscribe-form-button
+    display: flex
     margin-top: 50px
     margin-left: auto
-    display: flex
+    cursor: pointer
 
     > .icon
       width: 20px
