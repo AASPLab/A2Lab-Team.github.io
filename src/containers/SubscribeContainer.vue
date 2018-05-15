@@ -39,7 +39,7 @@
       </component-button>
     </form>
 
-    <subscribe-message v-if="isMessageVisible" @close="isMessageVisible = false" />
+    <subscribe-message v-if="isMessageVisible" @close="close()" />
   </section>
 </template>
 
@@ -113,6 +113,10 @@
           email: null,
           occupation: null,
         }
+      },
+      close () {
+        this.isMessageVisible = false
+        this.$router.push({ name: 'Início' })
       }
     }
   }
