@@ -75,7 +75,7 @@
 
         this.error.email = await validate(this.email, [
           (value) => isRequired(value) || 'Não se esqueça de preencher seu email.',
-          (value) => /^.+@.+\..+$/.test(value) || 'Esse e-mail parece invalido.'
+          (value) => /^.+@.+\..+$/.test(value) || 'Esse e-mail não parece valido.'
         ])
 
         const isError = Object.values(this.error).some((value) => value !== null)
