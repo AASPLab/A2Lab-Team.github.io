@@ -18,15 +18,15 @@
 
     <section class="institutional">
       <div class="links">
-        <a class="link -A2Lab" href="?" target="_blank">
-          <img class="icon" src="~@/assets/icons/A2Lab.svg" alt="A2Lab" />
+        <a class="link -AASPLab" target="_blank">
+          <img class="icon" src="~@/assets/icons/AASPLab.svg" alt="AASPLab" />
         </a>
         <a class="link -AASP" href="https://www.aasp.org.br/" target="_blank">
           <img class="icon" src="~@/assets/icons/AASP.svg" alt="AASP" />
         </a>
       </div>
 
-      <p class="copyright">&copy; 2018 A2LAB - AASP.</p>
+      <p class="copyright">&copy; 2018 AASPLab - AASP.</p>
       <p class="address">R. Álvares Penteado, Nº 151 - Centro, São Paulo/SP - CEP 01012-905</p>
     </section>
   </footer>
@@ -64,7 +64,7 @@
       @extends $layout-footer-links
       align-items: flex-end
 
-    > .link.-A2Lab
+    > .link.-AASPLab
       width: 51px
       height: 29px
 

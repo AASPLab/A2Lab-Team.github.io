@@ -7,7 +7,7 @@ export default [
   {
     icon: require('@/assets/icons/Hoje.svg'),
     title: 'Hoje',
-    description: 'Para conectar e valorizar a advocacia, a AASP cria a A2Lab, com o objetivo de trazer inovação e tecnologia para o mercado jurídico. Mantendo sua tradição e credibilidade e aliando as competências necessárias para a nova economia.'
+    description: 'Para conectar e valorizar a advocacia, a AASP cria a AASPLab, com o objetivo de trazer inovação e tecnologia para o mercado jurídico. Mantendo sua tradição e credibilidade e aliando as competências necessárias para a nova economia.'
   },
   {
     icon: require('@/assets/icons/Amanhã.svg'),

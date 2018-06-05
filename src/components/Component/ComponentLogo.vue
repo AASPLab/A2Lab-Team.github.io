@@ -3,16 +3,16 @@
     <img
       v-if="isAlternative"
       class="image"
-      src="~@/assets/images/Logo-branco.svg"
-      alt="A2Lab"
-      title="Logo branco da A2Lab"
+      src="~@/assets/images/Logo-White.svg"
+      alt="AASPLab"
+      title="Logo branco da AASPLab"
     />
     <img
       v-else
       class="image"
       src="~@/assets/images/Logo.svg"
-      alt="A2Lab"
-      title="Logo da A2Lab"
+      alt="AASPLab"
+      title="Logo da AASPLab"
     />
   </figure>
 </template>
