@@ -17,7 +17,7 @@
     <h2 class="title">Faça parte do <strong>futuro</strong> do direito</h2>
 
     <component-button class="button" :to="{ name: 'Inscrição' }" size="xl">
-      Seja um <strong>A2 tester</strong>
+      Seja um <strong>Beta Tester</strong>
     </component-button>
   </section>
 </template>
